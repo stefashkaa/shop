@@ -9,35 +9,37 @@
     <div id="all">
       <div id="content">
         <div class="container">
+          <div class="row">
 
-          <div class="col-sm-3">
-            <div class="panel panel-default sidebar-menu">
+            <div class="col-sm-12"></div>
 
-              <div class="panel-heading">
-                <h3 class="panel-title">Categories</h3>
-              </div>
+            <div class="col-sm-3">
+              <div class="panel panel-default sidebar-menu">
 
-              <div class="panel-body">
-                <ul class="nav nav-pills nav-stacked category-menu">
-                  <c:forEach var="category" items="${categories}">
-                      <li>
-                        <a href="category.html?id=${category.id}">${category.name}</a>
-                      </li>
-                  </c:forEach>
-                </ul>
+                <div class="panel-heading">
+                  <h3 class="panel-title">Categories</h3>
+                </div>
+
+                <div class="panel-body">
+                  <ul class="nav nav-pills nav-stacked category-menu">
+                    <c:forEach var="category" items="${categories}">
+                        <li>
+                          <a href="category.html?id=${category.id}">${category.name}</a>
+                        </li>
+                    </c:forEach>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-sm-9">
-            <ul class="breadcrumb">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="category.html">Category</a></li>
-              <li>${category.name}</li>
-            </ul>
+            <div class="col-sm-9">
+              <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>${category.name}</li>
+              </ul>
 
-            <div class="row products">
-              <c:forEach var="product" items="${products}">
+              <div class="row products">
+                <c:forEach var="product" items="${products}">
                   <div class="col-sm-4 col-sm-6">
                     <div class="product">
                       <a href="detail?id=${product.id}">
@@ -60,9 +62,10 @@
                       </div>
                     </div>
                   </div>
-              </c:forEach>
-            </div>
+                </c:forEach>
+              </div>
 
+            </div>
           </div>
         </div>
       </div>
