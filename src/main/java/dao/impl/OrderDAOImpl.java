@@ -16,7 +16,7 @@ public class OrderDAOImpl implements OrderDAO {
         int ret = -1;
 
         try (Connection connection = DBConnection.getInstance().getConnection()){
-            String sql = "INSERT INTO orders(name, phone, address, note, created, user_id) "
+            String sql = "INSERT INTO orders(name, phone, address, note, created, client_id) "
                     + "VALUES(?, ?, ?, ?, ?, ?)";
 
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
