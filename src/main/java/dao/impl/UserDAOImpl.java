@@ -18,7 +18,7 @@ public class UserDAOImpl implements UserDAO {
         User user = null;
 
         try (Connection connection = DBConnection.getInstance().getConnection()){
-            String sql = "SELECT * FROM user WHERE email = ? AND password = ?";
+            String sql = "SELECT * FROM client WHERE email = ? AND password = ?";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, email);
             ps.setString(2, password);
@@ -40,7 +40,7 @@ public class UserDAOImpl implements UserDAO {
         boolean ret = false;
 
         try (Connection connection = DBConnection.getInstance().getConnection()){
-            String sql = "SELECT * FROM user WHERE email = ?";
+            String sql = "SELECT * FROM client WHERE email = ?";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, email);
             ResultSet rs = ps.executeQuery();
@@ -58,7 +58,7 @@ public class UserDAOImpl implements UserDAO {
         int ret = -1;
 
         try (Connection connection = DBConnection.getInstance().getConnection()){
-            String sql = "INSERT INTO user(name, email, password) VALUES(?, ?, ?)";
+            String sql = "INSERT INTO client(name, email, password) VALUES(?, ?, ?)";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, user.getName());
             ps.setString(2, user.getEmail());
