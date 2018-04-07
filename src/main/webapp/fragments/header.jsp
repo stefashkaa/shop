@@ -36,10 +36,6 @@
           <span class="sr-only">Toggle navigation</span>
           <i class="fa fa-align-justify"></i>
         </button>
-        <button type="button" id="btnSearch" class="navbar-toggle" data-toggle="collapse" data-target="#search">
-          <span class="sr-only">Toggle search</span>
-          <i class="fa fa-search"></i>
-        </button>
         <a class="btn btn-default navbar-toggle" href="cart.html?action=view">
           <i class="fa fa-shopping-cart"></i>  
           <span class="hidden-xs">
@@ -55,7 +51,7 @@
     <div class="navbar-collapse collapse" id="navigation">
       <ul class="nav navbar-nav navbar-left">
         <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="cart.html?action=view">Your cart</a></li>
+        <li><a href="cart.html?action=view">Cart</a></li>
         <li><a href="checkout.html">Checkout</a></li>
       </ul>
     </div>
@@ -72,19 +68,6 @@
             </c:choose>
           </span>
         </a>
-      </div>
-
-      <div class="navbar-collapse collapse right" id="search-not-mobile">
-        <form class="navbar-form" action="search.html" method="GET">
-        <div class="input-group">
-          <input type="text" class="form-control" name="keyword" placeholder="Search" />
-          <span class="input-group-btn">
-            <button type="submit" name="btnSearch" class="btn btn-primary">
-              <i class="fa fa-search"></i>
-            </button>
-          </span>
-        </div>
-      </form>
       </div>
 
     </div>

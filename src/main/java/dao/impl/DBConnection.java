@@ -10,7 +10,7 @@ public class DBConnection {
 
     private static DBConnection instance;
 
-    private Connection connection;
+    private static Connection connection;
 
     public DBConnection() {
 
@@ -32,8 +32,12 @@ public class DBConnection {
     }
 
     public static DBConnection getInstance() {
-        if (instance == null) {
-            instance = new DBConnection();
+        try {
+            if (instance == null || connection.isClosed()) {
+                instance = new DBConnection();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return instance;
     }
