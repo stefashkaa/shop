@@ -42,12 +42,12 @@
                 <c:forEach var="product" items="${products}">
                   <div class="col-sm-4 col-sm-6">
                     <div class="product">
-                      <a href="detail?id=${product.id}">
+                      <a href="product.html?id=${product.id}">
                         <img src="<c:url value="static/upload/${product.image}" />"
                              alt="Product" class="img-responsive img-product" />
                       </a>
                       <div class="text">
-                        <h3><a href="detail?id=${product.id}">${product.name}</a></h3>
+                        <h3><a href="product.html?id=${product.id}">${product.name}</a></h3>
                         <p class="price">
                           ${product.price}$
                         </p>
