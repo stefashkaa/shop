@@ -49,7 +49,8 @@ input[type="number"] {
 }
 
 .img-product {
-    width: 180px;
+    max-width: 180px;
+    /*width: 180px;*/
     height: 180px;
     margin: 0 auto;
 }

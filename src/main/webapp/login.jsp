@@ -33,7 +33,7 @@
                   </div>
                   <div class="text-center">
                     <button type="submit" class="btn btn-primary" name="btnLogin">
-                      <i class="fa fa-client-md"></i> Login
+                      <i class="fa fa-user"></i> Login
                     </button>
                   </div>
                 </form>

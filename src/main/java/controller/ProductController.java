@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import dao.impl.CategoryDAOImpl;
 import dao.ProductDAO;
 import dao.impl.ProductDAOImpl;
+import entities.Category;
 import entities.Product;
 
 /**
@@ -53,6 +54,7 @@ public class ProductController extends HttpServlet {
             } else {
                 request.setAttribute("categories", categoryDAO.findAll());
                 request.setAttribute("product", product);
+                request.setAttribute("currentCategory", product.getCategory());
                 forward = "product.jsp";
             }
         } catch (NumberFormatException e) {

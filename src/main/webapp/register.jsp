@@ -42,7 +42,7 @@
                     <input type="password" class="form-control" name="confirmPassword">
                   </div>
                   <div class="text-center">
-                    <button type="submit" class="btn btn-primary" name="register"><i class="fa fa-client-md"></i> Register</button>
+                    <button type="submit" class="btn btn-primary" name="register"><i class="fa fa-user"></i> Register</button>
                   </div>
                 </form>
               </div>
