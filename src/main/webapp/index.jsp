@@ -64,8 +64,8 @@
                       </a>
                       <div class="text">
                         <h3><a href="product.html?id=${product.id}">${product.name}</a></h3>
-                        <p class="price">
-                            ${product.price}$<!-- TODO: create style -->
+                        <p class="price good-price">
+                            ${product.price}$
                         </p>
                         <p class="buttons">
                           <a href="product.html?id=${product.id}" class="btn btn-default">

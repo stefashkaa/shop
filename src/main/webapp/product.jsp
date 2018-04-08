@@ -64,7 +64,7 @@
                     </tr>
                     <tr>
                       <td>Price</td>
-                      <td>${product.price}$</td>
+                      <td class="good-price">${product.price}$</td>
                     </tr>
                     <tr>
                       <td>Description</td>

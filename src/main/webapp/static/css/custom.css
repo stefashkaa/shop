@@ -8,6 +8,11 @@
     width: 100%;
 }
 
+.good-price {
+    color: #4a7f45 !important;
+    font-weight: bold !important;
+}
+
 #category-menu {
     position: fixed;
     float: left;
@@ -50,7 +55,6 @@ input[type="number"] {
 
 .img-product {
     max-width: 180px;
-    /*width: 180px;*/
     height: 180px;
     margin: 0 auto;
 }

@@ -65,8 +65,17 @@ public class CartController extends HttpServlet {
                 if (product == null) {
                     request.getRequestDispatcher("/404.jsp").forward(request, response);
                 } else {
+                    boolean isExists = false;
                     if (action.equals("add")) { // Add
-                        cart.add(new Item(product, 1));
+                        for (Item i : cart.getItems()) {
+                            if(i.getProduct().getId() == product.getId()) {
+                                isExists = true;
+                                session.setAttribute("error", "This product is already added to cart!");
+                            }
+                        }
+                        if(!isExists) {
+                            cart.add(new Item(product, 1));
+                        }
                     } else { // Remove
                         cart.remove(product.getId());
                     }

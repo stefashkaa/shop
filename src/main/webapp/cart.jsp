@@ -58,10 +58,10 @@
                               </td>
                               <td>
                                 <input type="number" name="${item.product.id}" value="${item.quantity}" 
-                                       class="form-control" min="0" max="10" />
+                                       class="form-control" min="1" max="10"/>
                               </td>
-                              <td>${item.product.price}$</td>
-                              <td>${item.subTotal}$</td>
+                              <td class="good-price">${item.product.price}$</td>
+                              <td class="good-price">${item.subTotal}$</td>
                               <td>
                                 <a href="cart.html?action=remove&id=${item.product.id}"><i class="fa fa-trash-o"></i></a>
                               </td>
@@ -71,7 +71,7 @@
                       <tfoot>
                         <tr>
                           <th colspan="4">Total</th>
-                          <th colspan="2">${cart.total}$</th>
+                          <th class="good-price" colspan="2">${cart.total}$</th>
                         </tr>
                       </tfoot>
                     </table>
