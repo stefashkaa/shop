@@ -13,7 +13,7 @@
 
             <div class="col-sm-12"></div>
 
-            <div class="col-sm-3">
+            <div id="category-menu" class="col-sm-3">
               <div class="panel panel-default sidebar-menu">
 
                 <div class="panel-heading">
@@ -32,7 +32,7 @@
               </div>
             </div>
 
-            <div class="col-sm-9">
+            <div id="product-list" class="col-sm-9">
               <ul class="breadcrumb">
                 <li><a href="index.html">Home</a></li>
                 <li>${category.name}</li>

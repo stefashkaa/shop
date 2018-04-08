@@ -938,7 +938,11 @@ h1 {
   background: #333;
   color: #ccc;
   padding: 20px 0;
-  font-size: 12px;
+  font-size: 14px;
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 #copyright p {
   margin: 0;
