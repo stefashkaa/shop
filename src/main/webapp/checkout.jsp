@@ -72,7 +72,7 @@
 
                   <div class="box-footer">
                     <div class="pull-left">
-                      <a href="cart.html" class="btn btn-default">
+                      <a href="cart.html?action=view" class="btn btn-default">
                         <i class="fa fa-chevron-left"></i>Back to shopping cart
                       </a>
                     </div>
