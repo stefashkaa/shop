@@ -1,6 +1,7 @@
 package dao.impl;
 
 import dao.OrderDAO;
+import entities.Cart;
 import entities.Item;
 import entities.Order;
 import java.sql.*;
@@ -10,7 +11,21 @@ import java.util.logging.Logger;
 public class OrderDAOImpl implements OrderDAO {
 
     public OrderDAOImpl() { }
-    
+
+    public void update(Cart cart) {
+        try (Connection connection = DBConnection.getInstance().getConnection()){
+            for(Item i : cart.getItems()) {
+                String sql = "UPDATE item set quantity = ? WHERE product_id = ?";
+                PreparedStatement ps = connection.prepareStatement(sql);
+                ps.setInt(1, i.getQuantity());
+                ps.setInt(2, i.getProduct().getId());
+                ps.executeUpdate();
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
     @Override
     public int save(Order order) {
         int ret = -1;

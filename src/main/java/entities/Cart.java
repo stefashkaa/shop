@@ -7,17 +7,28 @@ public class Cart {
 
     private static final int LIMIT_ITEMS = 10;
     private List<Item> items;
+    private List<Integer> productIds;
 
     public Cart() {
         items = new ArrayList<>();
+        productIds = new ArrayList<>();
     }
     
     public Cart(List<Item> items) {
         this.items = items;
+        this.productIds = getProductIds();
     }
 
     public List<Item> getItems() {
         return items;
+    }
+
+    public List<Integer> getProductIds() {
+        productIds = new ArrayList<>();
+        for (Item e : items) {
+            productIds.add(e.getProduct().getId());
+        }
+        return productIds;
     }
 
     public void add(Item item) {

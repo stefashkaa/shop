@@ -10,7 +10,7 @@
       <div id="content">
         <div class="container">
           <div class="row">
-
+            
             <div class="col-sm-10 col-sm-offset-1">
               <ul class="breadcrumb">
                 <li><a href="index.html">Home</a>
@@ -58,10 +58,11 @@
                               </td>
                               <td>
                                 <input type="number" name="${item.product.id}" value="${item.quantity}" 
-                                       class="form-control" min="1" max="10"/>
+                                       class="form-control" min="1" max="10"
+                                       onchange="changeTotal(${item.product.id}, ${cart.productIds})"/>
                               </td>
-                              <td class="good-price">${item.product.price}$</td>
-                              <td class="good-price">${item.subTotal}$</td>
+                              <td name="${item.product.id}.price" class="good-price">${item.product.price}$</td>
+                              <td name="${item.product.id}.subTotal" class="good-price">${item.subTotal}$</td>
                               <td>
                                 <a href="cart.html?action=remove&id=${item.product.id}"><i class="fa fa-trash-o"></i></a>
                               </td>
@@ -71,7 +72,7 @@
                       <tfoot>
                         <tr>
                           <th colspan="4">Total</th>
-                          <th class="good-price" colspan="2">${cart.total}$</th>
+                          <th name="total" class="good-price" colspan="2">${cart.total}$</th>
                         </tr>
                       </tfoot>
                     </table>
@@ -79,12 +80,11 @@
 
                   <div class="box-footer">
                     <div class="pull-left">
-                      <a href="index.html" class="btn btn-default"><i class="fa fa-chevron-left"></i> Continue shopping</a>
+                      <button type="submit" name="action" value="index" class="btn btn-default"><i class="fa fa-chevron-left"></i> Continue shopping</button>
                     </div>
                     <div class="pull-right">
-                      <button type="submit" class="btn btn-default"><i class="fa fa-refresh"></i> Update shopping cart</button>
-                      <a href="checkout.html" class="btn btn-primary">Proceed to checkout <i class="fa fa-chevron-right"></i>
-                      </a>
+                      <button type="submit" name="action" class="btn btn-default"><i class="fa fa-refresh"></i> Update shopping cart</button>
+                      <button type="submit" name="action" value="checkout" class="btn btn-primary">Proceed to checkout <i class="fa fa-chevron-right"></i></button>
                     </div>
                   </div>
                 </form>
