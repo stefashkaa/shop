@@ -13,6 +13,10 @@
     font-weight: bold !important;
 }
 
+#price-td {
+    width: 120px !important;
+}
+
 #category-menu {
     position: fixed;
     float: left;

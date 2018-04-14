@@ -66,7 +66,9 @@ public class CartController extends HttpServlet {
 
         String action = request.getParameter("action");
         if(action == null || action.equals("")) {
-            if (cart.getCount() == 0) {
+            if (cart == null) {
+                request.getRequestDispatcher("/404.jsp").forward(request, response);
+            } else if (cart.getCount() == 0) {
                 session.setAttribute("error", "Your cart is empty!");
                 response.sendRedirect("index.html");
             } else {

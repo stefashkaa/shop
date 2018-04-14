@@ -61,8 +61,8 @@
                                        class="form-control" min="1" max="10"
                                        onchange="changeTotal(${item.product.id}, ${cart.productIds})"/>
                               </td>
-                              <td name="${item.product.id}.price" class="good-price">${item.product.price}$</td>
-                              <td name="${item.product.id}.subTotal" class="good-price">${item.subTotal}$</td>
+                              <td id="price-td" name="${item.product.id}.price" class="good-price">${item.product.price}$</td>
+                              <td id="price-td" name="${item.product.id}.subTotal" class="good-price">${item.subTotal}$</td>
                               <td>
                                 <a href="cart.html?action=remove&id=${item.product.id}"><i class="fa fa-trash-o"></i></a>
                               </td>
